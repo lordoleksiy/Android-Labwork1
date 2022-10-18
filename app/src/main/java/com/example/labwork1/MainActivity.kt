@@ -1,15 +1,13 @@
 package com.example.labwork1
 
-import android.annotation.SuppressLint
-import android.content.Intent
+import CustomPassword
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.InputType
-import android.view.MenuItem
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
-import androidx.core.view.marginLeft
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var editText: EditText
@@ -25,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             }
             else{
                 editText.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                editText.transformationMethod = TextTransformationMethod()
+                editText.transformationMethod = CustomPassword()
             }
             editText.setSelection(editText.text.length)
         }
